@@ -1,6 +1,6 @@
 'use strict';
 
-var userPoints = 0
+var userPoints = 0;
 
 var user = prompt('What is your name?');
 console.log('The user\'s name is ' + user);
