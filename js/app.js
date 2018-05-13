@@ -67,8 +67,42 @@ if(answer5 === 'yes' || answer5 === 'y') {
 
 alert (user + ' you have ' + userPoints + ' points ');
 
-alert (user + ' I hope you had fun playing this game. Now feel free to read more about me.');
+var day = 2;
 
+for(var i=0; i < 4; i++) {
 
+  var dayAnswer = prompt('What day of the month was I born? Enter a number between 1 - 31');
+  if(dayAnswer === '2'){
+    userPoints++;
+    alert('That is correct, I was born on October 2. ' + user + ' you now have ' + userPoints + ' points!');
+    break;
+  } else if(dayAnswer > 2){
+    alert('Nope, that is too high');
+  } else if (dayAnswer < 2){
+    alert('Too low, lets try again.');
+  }
+}
 
+var states = ['california', 'washington', 'nevada', 'oregon'];
+var counter = 0;
+var rightAnswer;
+
+while (counter < 7) {
+  var stateAnswer = prompt(' I have only visited four states in the United States. Can you guess one of the states?').toLowerCase();
+  for(var i = 0; i < states.length; i++){
+    if(stateAnswer === states[i]){
+      rightAnswer = true;
+    }
+  }
+  if(!rightAnswer){
+    alert('Nope, nice guess!');
+    counter++;
+  } else {
+    alert('Great guess!');
+    userPoints++;
+    counter+7;
+  }
+}
+
+alert(user + ' You finished with a total of ' + userPoints + ' points! Thanks for playing. Now feel free to read more about me.')
 
