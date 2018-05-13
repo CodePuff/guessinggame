@@ -101,8 +101,7 @@ while (counter < 7) {
     alert('Great guess!');
     userPoints++;
     counter+7;
+    alert( user + ', you completed the game with ' + userPoints + ' points.');
+    break;
   }
 }
-
-alert(user + ' You finished with a total of ' + userPoints + ' points! Thanks for playing. Now feel free to read more about me.')
-
